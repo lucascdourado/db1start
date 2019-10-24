@@ -16,6 +16,7 @@
     <script>
         var cidade = window.prompt('Insira uma das cidades abaixo: \nCuritiba \nMaringá \nLondrina \nPinhais \nChapecó \nJoinville \nBlumenau \nFlorianópolis \nPorto Alegre \nGramado')
         cidade.toLowerCase()
+        cidade = cidade.trim()
 
         //tratando as variáveis pra não haver conflito em questão de acentuação
         if (cidade == 'maringá'){
