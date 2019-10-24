@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio de Geografia</title>
+    <style>
+            body {
+                font: normal 20pt arial;
+            }
+    </style>
+</head>
+<body>
+
+    <script>
+        var palavra = window.prompt('Insira uma palavra ou um texto: ')
+        palavra.toLowerCase()
+
+        var palavrabranco = palavra.trim()
+        palavrabranco = palavrabranco.replace(/ /g,"")
+
+        var branco = palavra.length - palavrabranco.length
+
+        if (branco == 1) {
+            var espaco = 'espaço'
+        } else {
+            var espaco = 'espaços'
+        }
+
+        function removervogal(remove){
+            return remove.replace(/[aeiouà-ú]/gi,'')
+        }
+
+        var semvogais = removervogal(palavrabranco)
+
+        var totalVogal = palavrabranco.length - semvogais.length       
+        
+        if (totalVogal == 1) {
+            var vogal = 'vogal'
+        } else {
+            var vogal = 'vogais'
+        }
+
+        document.write(`${palavra.length} caracteres <br>${branco} ${espaco} em branco <br>${totalVogal} ${vogal} `)
+    </script>
+    
+</body>
+</html>
