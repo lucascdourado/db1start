@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio de Geografia</title>
+    <style>
+            body {
+                font: normal 20pt arial;
+            }
+    </style>
+</head>
+<body>
+
+    <script>
+        var cidade = window.prompt('Insira uma das cidades abaixo: \nCuritiba \nMaringá \nLondrina \nPinhais \nChapecó \nJoinville \nBlumenau \nFlorianópolis \nPorto Alegre \nGramado')
+        cidade.toLowerCase()
+
+        //tratando as variáveis pra não haver conflito em questão de acentuação
+        if (cidade == 'maringá'){
+            cidade = 'maringa'
+        }
+        if (cidade == 'chapecó'){
+            cidade = 'chapeco'
+        }
+        if (cidade == 'florianópolis'){
+            cidade = 'florianopolis'
+        }
+
+
+        if ((cidade == 'curitiba') || (cidade == 'maringa') || (cidade == 'londrina') || (cidade == 'pinhais')){
+            var uf = 'PR'
+            var pre = 'ao'
+        } else if ((cidade == 'chapeco') || (cidade == 'joinville') || (cidade == 'blumenau') || (cidade == 'florianopolis')){
+            var uf = 'SC'
+            var pre = 'à'
+        } else if ((cidade == 'porto alegre') || (cidade == 'gramado')){
+            var uf = 'RS'
+            var pre = 'ao'
+        } else {
+            window.alert ('Cidade não cadastrada')
+        }
+
+
+        if ((cidade == 'curitiba') || (cidade == 'florianopolis') || (cidade == 'porto alegre')){
+            var capital = 'É'
+        } else {
+            var capital = 'Não é'
+        }
+
+
+        document.write(`Pertence ${pre} ${uf} <br>${capital} capital`)
+    </script>
+    
+</body>
+</html>
